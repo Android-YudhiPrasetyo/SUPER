@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.3.4'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.3.4'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.2.1'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation 'net.masterthought:maven-cucumber-reporting:5.7.0'
+    implementation 'com.aventstack:extentreports-cucumber4-adapter:1.2.1'
+    implementation group: 'net.masterthought', name: 'maven-cucumber-reporting', version: '5.7.0'
+// https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.2.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
